@@ -1,0 +1,169 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9f9e8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Search input and button */
+#searchInput {
+    width: 300px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Session ID and Error Message */
+#sessionIdOutput,
+#errorMessage {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#errorMessage {
+    color: #d9534f;
+}
+
+/* Results Section */
+#resultsOutput {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#resultsOutput ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#resultsOutput li {
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+#resultsOutput li:hover {
+    background-color: #f0f8ff;
+}
+
+#resultsOutput li:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+/* Loading message */
+#resultsOutput:empty::before {
+    content: "Enter a search term and click 'Search'.";
+    color: #777;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+    #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #resultsOutput {
+        width: 95%;
+    }
+}
+
+#resultsOutput {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e87f7f;
+    font-weight: bold;
+}
+
+/*tr:nth-child(even) {
+    background-color: #f9f9f9;
+}*/
+tr{
+    background-color:transparent;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    #resultsOutput {
+        width: 95%;
+    }
+}
+
+#cornerImage {
+    position: absolute; /* Allows for precise positioning */
+    top: 10px; /* Distance from the top */
+    left: 590px; /* Distance from the left */
+    width: 100px; /* Set a width for the image, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+}

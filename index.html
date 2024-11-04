@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault Record Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="fetchVaultSession()">
+    <img src="image/vault logo.png" id="cornerImage" alt="Corner Image"> <br><br><br><br><br> <!-- Add your image here -->
+    <h2>Veeva Vault</h2>
+
+    <div id="searchContainer">
+        <label for="searchInput">Search Records:</label>
+        <input type="text" id="searchInput" placeholder="Enter search term">
+        <button onclick="fetchRecords()">Search</button>
+    </div>
+
+    <div id="errorMessage" style="color: red; display: none;"></div>
+
+    <p id="resultsMessage"></p>
+    
+    <!-- Predefined table structure -->
+    <div id="resultsContainer" style="display: none;">
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>State</th>
+                    <th>Study Type</th>
+                    <th>Study Subtype</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
